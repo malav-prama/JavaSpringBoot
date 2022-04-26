@@ -10,7 +10,8 @@ public class PromotionDao {
     PromotionRepository promotionRepository;
 
     public void saveUser(Promotion promotion){
-        promotionRepository.save(promotion);
+       Promotion dbPromotion = promotionRepository.save(promotion);
+        System.out.println(dbPromotion.getId());
     }
 
 
